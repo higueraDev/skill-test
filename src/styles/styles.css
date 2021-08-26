@@ -1,0 +1,309 @@
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+/*========================Imports==============================*/
+/*========================Functions==============================*/
+/*========================Mixins==============================*/
+/*========================Variables==============================*/
+/*========================Custom Styles==============================*/
+.cta {
+  width: 45.3333333333vw;
+  line-height: 12.8vw;
+  font-size: 4.8vw;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: "Roboto";
+  font-weight: 400;
+  text-align: center;
+  background: transparent;
+  color: #252543;
+  border: 1px solid #252543;
+  transition: all 0.4s;
+}
+@media (min-width: 375px) {
+  .cta {
+    width: 170px;
+  }
+}
+@media (min-width: 768px) {
+  .cta {
+    width: 11.8055555556vw;
+  }
+}
+@media (min-width: 1440px) {
+  .cta {
+    width: 170px;
+  }
+}
+@media (min-width: 375px) {
+  .cta {
+    line-height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .cta {
+    line-height: 3.3333333333vw;
+  }
+}
+@media (min-width: 1440px) {
+  .cta {
+    line-height: 48px;
+  }
+}
+@media (min-width: 375px) {
+  .cta {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .cta {
+    font-size: 1.25vw;
+  }
+}
+@media (min-width: 1440px) {
+  .cta {
+    font-size: 18px;
+  }
+}
+.cta:hover {
+  text-decoration: none;
+  background: #252543;
+  border-color: #252543;
+  color: #FFFFFF;
+}
+.cta.cta-primary {
+  color: #FFFFFF;
+  border-color: #949FAD;
+}
+.cta.cta-primary:hover {
+  border-color: #252543;
+}
+
+/*========================MAIN==============================*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  background: #7DCA2C;
+  color: #00C3DE;
+  width: 100%;
+  overflow: inherit;
+}
+body h1 {
+  font: 700 67px/80px "PT Serif";
+  margin: 0;
+  font-size: 14.9333333333vw;
+  line-height: 17.0666666667vw;
+}
+@media (min-width: 375px) {
+  body h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 768px) {
+  body h1 {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h1 {
+    font-size: 72px;
+  }
+}
+@media (min-width: 375px) {
+  body h1 {
+    line-height: 64px;
+  }
+}
+@media (min-width: 768px) {
+  body h1 {
+    line-height: 5.5555555556vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h1 {
+    line-height: 80px;
+  }
+}
+body h2 {
+  font: 700 56px/64px "PT Serif";
+  margin: 0;
+  font-size: 10.6666666667vw;
+  line-height: 12.8vw;
+}
+@media (min-width: 375px) {
+  body h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  body h2 {
+    font-size: 3.8888888889vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h2 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 375px) {
+  body h2 {
+    line-height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  body h2 {
+    line-height: 4.4444444444vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h2 {
+    line-height: 64px;
+  }
+}
+body h3 {
+  font: 700 40px/48px "PT Serif";
+  margin: 0;
+  font-size: 10.6666666667vw;
+  line-height: 12.8vw;
+}
+@media (min-width: 375px) {
+  body h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  body h3 {
+    font-size: 2.7777777778vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 375px) {
+  body h3 {
+    line-height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  body h3 {
+    line-height: 3.3333333333vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h3 {
+    line-height: 48px;
+  }
+}
+body h4 {
+  font: 700 24px/32px "PT Serif";
+  margin: 0;
+}
+body h5 {
+  font: 300 14px/32px "Roboto";
+  margin: 0;
+  font-size: 6.4vw;
+  line-height: 8.5333333333vw;
+}
+@media (min-width: 375px) {
+  body h5 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  body h5 {
+    font-size: 1.6666666667vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h5 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 375px) {
+  body h5 {
+    line-height: 32px;
+  }
+}
+@media (min-width: 768px) {
+  body h5 {
+    line-height: 2.2222222222vw;
+  }
+}
+@media (min-width: 1440px) {
+  body h5 {
+    line-height: 32px;
+  }
+}
+body img {
+  display: inline-block;
+  width: 100%;
+}
+body label {
+  font: 700 12px/14px "Roboto";
+}
+body nav {
+  transition: all 0.4s ease;
+  width: 100%;
+  position: absolute !important;
+  background: transparent;
+  z-index: 20;
+}
+body nav.darken {
+  background: #252543;
+}
+body nav a,
+body nav .fa {
+  color: #E5E5E5;
+}
+body nav a:hover,
+body nav .fa:hover {
+  text-decoration: none;
+  color: #E5E5E5;
+}
+body p {
+  font: 300 20px/32px "Roboto";
+  font-size: 5.3333333333vw;
+  line-height: 8.5333333333vw;
+}
+@media (min-width: 375px) {
+  body p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  body p {
+    font-size: 1.3888888889vw;
+  }
+}
+@media (min-width: 1440px) {
+  body p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 375px) {
+  body p {
+    line-height: 32px;
+  }
+}
+@media (min-width: 768px) {
+  body p {
+    line-height: 2.2222222222vw;
+  }
+}
+@media (min-width: 1440px) {
+  body p {
+    line-height: 32px;
+  }
+}
+body small {
+  font: 400 14px/24px "Roboto";
+  color: #252543;
+}
+
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+/*========================Hero Section==============================*//*# sourceMappingURL=styles.css.map */

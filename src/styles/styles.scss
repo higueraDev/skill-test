@@ -1,0 +1,227 @@
+/*=======================================================================================================================================*/
+// GENERAL STYLES
+/*=======================================================================================================================================*/
+
+/*========================Imports==============================*/
+
+
+/*========================Functions==============================*/
+
+// Responsive VW functions
+$max-breakpoint-xs: 375;
+
+$max-breakpoint-xl: 1440;
+
+@function get-vw-xs($target) {
+    $vw-context: ($max-breakpoint-xs*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-xl($target) {
+    $vw-context: ($max-breakpoint-xl*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+
+// Responsive Pixels function
+@function responsive-px($min-px, $max-px, $min-vw, $max-vw) {
+    @return calc(#{$min-px}px + (#{$max-px} - #{$min-px}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})));
+}
+
+/*========================Mixins==============================*/
+
+// Media Mixins
+@mixin min-screen($min) {
+    @media(min-width:#{$min}px) {
+        @content;
+    }
+}
+
+@mixin max-screen($max) {
+    @media(max-width:#{$max}px) {
+        @content;
+    }
+}
+
+@mixin responsive($property, $value1, $value2) {
+
+    #{$property}: get-vw-xs($value1);
+
+
+    @include min-screen($max-breakpoint-xs) {
+        #{$property}: $value1;
+    }
+
+    @include min-screen(768) {
+        #{$property}: get-vw-xl($value2);
+    }
+
+    @include min-screen($max-breakpoint-xl) {
+        #{$property}: $value2;
+    }
+
+
+}
+
+
+
+/*========================Variables==============================*/
+
+$primary-color: #252543;
+$secondary-color: #7DCA2C;
+$support-color: #F8F8F8;
+
+$primary-text-color: #E5E5E5;
+$secondary-text-color: #00C3DE;
+$support-text-color: #949FAD;
+$support-text-color-2: #142133;
+$support-text-color-3: #2A405D;
+
+$webfont1: 'PT Serif';
+$webfont2: 'Roboto';
+
+$cta-color: $primary-color;
+$cta-text-color: #FFFFFF;
+
+$H1: 700 67px/80px $webfont1;
+$H2: 700 56px/64px $webfont1;
+$H3: 700 40px/48px $webfont1;
+$H4: 700 24px/32px $webfont1;
+$H5: 300 14px/32px $webfont2;
+$Label: 700 12px/14px $webfont2;
+$Text_Big: 300 24px/32px $webfont2;
+$Text: 300 20px/32px $webfont2;
+$Text_Small: 400 14px/24px $webfont2;
+
+/*========================Custom Styles==============================*/
+
+.cta {
+    @include responsive(width, 170px, 170px);
+    @include responsive(line-height, 48px, 48px);
+    @include responsive(font-size, 18px, 18px);
+    display: inline-block;
+    border-radius: 3px;
+    font-family: $webfont2;
+    font-weight: 400;
+    text-align: center;
+    background: transparent;
+    color: $cta-color;
+    border: 1px solid $cta-color;
+    transition: all 0.4s;
+
+    &:hover {
+        text-decoration: none;
+        background: $cta-color;
+        border-color: $cta-color;
+        color: $cta-text-color;
+    }
+
+    &.cta-primary {
+        color: $cta-text-color;
+        border-color: $support-text-color;
+
+        &:hover {
+            border-color: $cta-color;
+        }
+    }
+
+}
+
+
+/*========================MAIN==============================*/
+
+html{
+    overflow-x: hidden;
+}
+
+body {
+    box-sizing: border-box;
+    background: $secondary-color;
+    color: $secondary-text-color;
+    width: 100%;
+    overflow: inherit;
+
+    h1 {
+        font: $H1;
+        margin: 0;
+        @include responsive(font-size, 56px, 72px);
+        @include responsive(line-height, 64px, 80px);
+    }
+
+    h2 {
+        font: $H2;
+        margin: 0;
+        @include responsive(font-size, 40px, 56px);
+        @include responsive(line-height, 48px, 64px);
+    }
+
+    h3 {
+        font: $H3;
+        margin: 0;
+        @include responsive(font-size, 40px, 40px);
+        @include responsive(line-height, 48px, 48px);
+    }
+
+    h4 {
+        font: $H4;
+        margin: 0;
+    }
+
+    h5 {
+        font: $H5;
+        margin: 0;
+        @include responsive(font-size, 24px, 24px);
+        @include responsive(line-height, 32px, 32px);
+    }
+
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    label {
+        font: $Label;
+    }
+
+    nav {
+        transition: all 0.4s ease;
+        width: 100%;
+        position: absolute !important;
+        background: transparent;
+        z-index: 20;
+
+        &.darken {
+            background: $primary-color;
+        }
+
+        a,
+        .fa {
+            color: $primary-text-color;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary-text-color;
+            }
+        }
+
+    }
+
+    p {
+        font: $Text;
+        @include responsive(font-size, 20px, 20px);
+        @include responsive(line-height, 32px, 32px);
+    }
+
+    small {
+        font: $Text_Small;
+        color: $primary-color;
+    }
+
+}
+
+
+/*=======================================================================================================================================*/
+// HOMEPAGE 
+/*=======================================================================================================================================*/
+
+/*========================Hero Section==============================*/
