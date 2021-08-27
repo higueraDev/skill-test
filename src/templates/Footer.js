@@ -1,11 +1,12 @@
+import Logo from '../assets/title2x.png'
+
 const Footer = () => {
     const view = `
-    <footer class="footer">
         <div class="container-xl">
             <div class="footer__logo">
                 <img
                     class="logo"
-                    src="assets/title.png"
+                    src="${Logo}"
                     alt="Rick &amp; Morty Logo"
                 />
             </div>
@@ -17,7 +18,6 @@ const Footer = () => {
                 <span>Rick and Morty - Property of Adult Swim</span>
             </div>
         </div>
-    </footer>
     `;
     return view;
 };
