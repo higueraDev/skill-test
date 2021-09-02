@@ -294,7 +294,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url('../assets/portal2x.png');
+            background-image: url('assets/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -390,7 +390,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url('../assets/portal2x.png');
+            background-image: url('assets/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -483,7 +483,7 @@ body {
                 width: 16px;
                 height: 24px;
                 margin-right: 10px;
-                background: url('../assets/scroll_icon.svg');
+                background: url('assets/scroll_icon.svg');
             }
         }
     }
@@ -670,7 +670,7 @@ body {
                     @include responsive(width, 24px, 27px);
                     @include responsive(height, 24px, 27px);
                     margin-bottom: 16px;
-                    background-image: url('../assets/check_icon.svg');
+                    background-image: url('assets/check_icon.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;

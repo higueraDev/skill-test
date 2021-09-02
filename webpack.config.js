@@ -50,8 +50,8 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "/assets/",
-                            publicPath: "/assets/",
+                            outputPath: "assets/",
+                            publicPath: "assets/",
                             name: '[name].[ext]'
                         },
                     },
