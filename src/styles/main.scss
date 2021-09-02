@@ -85,6 +85,7 @@ $max-breakpoint-xl: 1440;
     }
   }
 
+
 /*========================Variables==============================*/
 
 $primary-color: #252543;
@@ -110,8 +111,6 @@ $H3: 700 40px/48px $webfont1;
 
 $Text: 400 20px/24px $webfont2;
 $Text_Small: 400 14px/24px $webfont2;
-
-
 
 /*========================MAIN==============================*/
 
@@ -147,7 +146,7 @@ body {
         font: $H2;
         color: $secondary-text-color;
         margin: 0;
-        @include responsive(font-size, 28px, 54px);
+        @include responsive(font-size, 24px, 54px);
         @include responsive(line-height, 33px, 64px);
     }
 
@@ -295,7 +294,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url(assets/portal2x.png);
+            background-image: url('../assets/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -391,7 +390,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url(assets/portal2x.png);
+            background-image: url('../assets/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -484,7 +483,7 @@ body {
                 width: 16px;
                 height: 24px;
                 margin-right: 10px;
-                background: url(assets/scroll_icon.svg);
+                background: url('../assets/scroll_icon.svg');
             }
         }
     }
@@ -542,8 +541,11 @@ body {
 
     img{
         width: auto;
-        height: 100%;
         object-fit: contain;
+
+        @include min-screen(768){
+            height: 100%;
+        }
     }
 }
 
@@ -668,7 +670,7 @@ body {
                     @include responsive(width, 24px, 27px);
                     @include responsive(height, 24px, 27px);
                     margin-bottom: 16px;
-                    background-image: url('assets/check_icon.svg');
+                    background-image: url('../assets/check_icon.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;

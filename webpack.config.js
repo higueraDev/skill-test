@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ["@babel/polyfill", "./src/index.js"],
@@ -21,18 +21,42 @@ module.exports = {
                 },
             },
             {
+                test: /\.s?css$/,
+                use: [
+                    {
+                        loader:"style-loader"
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false
+                        }
+                    },
+                    {
+                        loader: 'resolve-url-loader',
+                      },
+                    {
+                        loader: "sass-loader",
+                        options:{
+                            sourceMap: true
+                        }
+                    },
+                ],
+
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "assets",
-                            name: '[name].[ext]',
+                            outputPath: "/assets/",
+                            publicPath: "/assets/",
+                            name: '[name].[ext]'
                         },
                     },
                 ],
             },
-
         ],
     },
     plugins: [
@@ -41,8 +65,23 @@ module.exports = {
             template: "./public/index.html",
             filename: "./index.html",
         }),
-        new CopyWebpackPlugin({
-            patterns: [{ from: "./src/styles/styles.css", to: "" }],
-        }),
+        new CopyWebpackPlugin(
+            {
+                patterns:[
+                    {
+                    from: path.resolve(__dirname, 'src', 'assets/portal2x.png'),
+                    to: 'assets'
+                },
+                    {
+                    from: path.resolve(__dirname, 'src', 'assets/scroll_icon.svg'),
+                    to: 'assets'
+                },
+                    {
+                    from: path.resolve(__dirname, 'src', 'assets/check_icon.svg'),
+                    to: 'assets'
+                }
+            ]
+            }
+        ),
     ],
 };
