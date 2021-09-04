@@ -1,10 +1,15 @@
+import logout from "./logout";
 
-const setCookie = (name,value) => {
+const setCookie = async(name,value) => {
     
-    var today = new Date();
-    var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-  
-    document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+    document.cookie = name + "=" + value + ";" + ";path=/user-data/";
+
+    const time = setTimeout(function(){
+        if (name === "email"){
+            logout();
+        }
+        document.cookie = name +"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/user-data/;"; 
+    }, 300000);
 };
 
 export default setCookie;

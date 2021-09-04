@@ -1,6 +1,6 @@
-import Logo from '../assets/title2x.png'
+import Logo from '../assets/images/title2x.png'
 
-const Header = () => {
+const Header = (buttonStatus,welcomeStatus, USER_NAME) => {
     const view = `
     <div class="container-xl">
         <div class="header__logo">
@@ -27,8 +27,11 @@ const Header = () => {
                 </li>
             </ul>
         </nav>
-        <div class="header__cta">
+        <div class="header__cta ${buttonStatus}">
             <a href="#subscribe-form" class="main-cta">Subscribe</a>
+        </div>
+        <div class="header-welcome ${welcomeStatus}">
+            Welcome Back <span>${USER_NAME}</span>
         </div>
     </div>
     `;

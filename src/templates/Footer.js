@@ -1,4 +1,4 @@
-import Logo from '../assets/title2x.png'
+import Logo from '../assets/images/title2x.png'
 
 const Footer = () => {
     const view = `

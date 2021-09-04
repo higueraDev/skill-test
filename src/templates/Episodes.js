@@ -1,4 +1,4 @@
-import Collage from '../assets/collage2x.png'
+import Collage from '../assets/images/collage2x.png'
 
 
 const Episodes = () => {

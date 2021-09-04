@@ -4,6 +4,30 @@
 
 /*========================Imports==============================*/
 
+@font-face {
+    font-family: PTSans;
+    src: url(../assets/fonts/PTSans-Regular.ttf)format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: PTSans;
+    src: url(../assets/fonts/PTSans-Bold.ttf)format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.ttf)format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/PTSans-Bold.ttf)format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 /*========================Functions==============================*/
 
@@ -99,7 +123,7 @@ $support-text-color-2: #142133;
 $support-text-color-3: #2A405D;
 $support-text-color-4: #71B727;
 
-$webfont1: 'PT Serif';
+$webfont1: 'PTSans';
 $webfont2: 'Roboto';
 
 $cta-color: $support-color;
@@ -120,6 +144,7 @@ $Text_Small: 400 14px/24px $webfont2;
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
 }
 
@@ -243,6 +268,52 @@ body {
 
 }
 
+.hide{
+    display: none;
+}
+
+
+.header-welcome{
+    font-family: $webfont2;
+    text-transform: uppercase;
+    color: $support-text-color-3;
+    font-weight: bold;
+
+    span{
+        color: $support-text-color-4;
+    }
+}
+
+.hero-welcome{
+    @include responsive(font-size, 22px, 42px);
+    color: $support-text-color-4;
+    font-weight: bold;
+    font-family: $webfont1;
+    
+    span{
+        @include responsive(font-size, 18px, 30px);
+        font-family: $webfont2;
+        text-transform: uppercase;
+        display: block;
+        color: $primary-text-color;
+    }
+}
+
+.banner-welcome{
+    @include responsive(font-size, 22px, 30px);
+    color: $support-text-color-4;
+    font-weight: bold;
+    font-family: $webfont1;
+    text-align: center;
+    
+    span{
+        @include responsive(font-size, 18px, 20px);
+        font-family: $webfont2;
+        text-transform: uppercase;
+        display: block;
+        color: $primary-text-color;
+    }
+}
 
 
 /*======================== Header ==============================*/
@@ -294,7 +365,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url('assets/portal2x.png');
+            background-image: url('../assets/images/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -390,7 +461,7 @@ body {
             margin: auto;
             width: 40%;
             height: 100%;
-            background-image: url('assets/portal2x.png');
+            background-image: url('../assets/images/portal2x.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -483,7 +554,7 @@ body {
                 width: 16px;
                 height: 24px;
                 margin-right: 10px;
-                background: url('assets/scroll_icon.svg');
+                background: url('../assets/images/scroll_icon.svg');
             }
         }
     }
@@ -670,7 +741,7 @@ body {
                     @include responsive(width, 24px, 27px);
                     @include responsive(height, 24px, 27px);
                     margin-bottom: 16px;
-                    background-image: url('assets/check_icon.svg');
+                    background-image: url('../assets/images/check_icon.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;

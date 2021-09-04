@@ -1,5 +1,5 @@
     
-    const smoothScroll = () =>{
+    const smoothScroll =  () =>{
 
         const links = document.querySelectorAll("a");
 

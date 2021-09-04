@@ -1,7 +1,7 @@
-import Spaceship from '../assets/spaceship.png'
+import Spaceship from '../assets/images/spaceship.png'
 
 
-const Banner = () => {
+const Banner = (buttonStatus, welcomeStatus, USER_EMAIL) => {
     const view = `
     <div class="banner__top">
         <div class="banner__icon">
@@ -17,10 +17,14 @@ const Banner = () => {
     </div>
     <div class="banner__bottom">
 
-        <div class="banner__cta">
+        <div class="banner__cta ${buttonStatus}">
             <a href="#subscribe-form" class="main-cta"
                 >Subscribe Now</a
             >
+        </div>
+        <div class="banner-welcome ${welcomeStatus}">
+            You are Already Subscribed
+            <span>${USER_EMAIL}</span>
         </div>
     </div>
     `;
