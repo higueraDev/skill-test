@@ -1,7 +1,12 @@
 import Spaceship from '../assets/images/spaceship.png'
 
 
-const Banner = (buttonStatus, welcomeStatus, USER_EMAIL) => {
+const Banner = (status, USER_EMAIL) => {
+    let buttonStatus ="";
+    let welcomeStatus="";
+
+    status ? buttonStatus = 'hide' : welcomeStatus = 'hide';
+
     const view = `
     <div class="banner__top">
         <div class="banner__icon">

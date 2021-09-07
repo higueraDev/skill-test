@@ -1,17 +1,13 @@
-import Header from "../templates/Header";
-import Hero from "../templates/Hero";
-import Banner from '../templates/Banner'
+import router from '../routes/index'
 
 const logout = () => {
-    const header = null || document.getElementById('header');
-    header.innerHTML = Header("","hide");
+    setTimeout(()=>{
+        
+        document.cookie = "USER_NAME=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "USER_EMAIL=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        router() ;
 
-    const hero = null || document.getElementById('hero-section');
-    hero.innerHTML = Hero("","hide");
-
-    const banner = null || document.getElementById('banner-section');
-    banner.innerHTML = Banner("","hide");
-
+    },3000);
 };
 
 export default logout;

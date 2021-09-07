@@ -1,17 +1,14 @@
-import Header from "../templates/Header";
-import Hero from "../templates/Hero";
-import Banner from '../templates/Banner'
+import setCookie from './setCookie';
+const login = () => {
 
-const login = (user,email) => {
-    const header = null || document.getElementById('header');
-    header.innerHTML = Header("hide","", user);
+    const form = document.getElementById("subscribe-form");
+    let USER_NAME = setCookie("USER_NAME", form.name.value);
+    let USER_EMAIL = setCookie("USER_EMAIL", form.email.value);
 
-    const hero = null || document.getElementById('hero-section');
-    hero.innerHTML = Hero("hide","", user);
-
-    const banner = null || document.getElementById('banner-section');
-    banner.innerHTML = Banner("hide","", email);
-
+    return {
+        USER_NAME: USER_NAME,
+        USER_EMAIL: USER_EMAIL
+    }
 };
 
 export default login;

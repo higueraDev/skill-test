@@ -1,10 +1,15 @@
 import Logo from '../assets/images/title2x.png'
 
-const Header = (buttonStatus,welcomeStatus, USER_NAME) => {
+const Header = (status, USER_NAME) => {
+    let buttonStatus ="";
+    let welcomeStatus="";
+
+    status ? buttonStatus = 'hide' : welcomeStatus = 'hide';
+
     const view = `
     <div class="container-xl">
         <div class="header__logo">
-            <a href="/"><img
+            <a href="./"><img
                 class="logo"
                 src="${Logo}"
                 alt="Rick &amp; Morty Logo"

@@ -1,7 +1,10 @@
 import Illustration from '../assets/images/Illustration.png'
 
-const Hero = (formStatus, welcomeStatus ,USER_NAME) => {
-    
+const Hero = (status,USER_NAME) => {
+    let formStatus ="";
+    let welcomeStatus="";
+
+    status ? formStatus = 'hide' : welcomeStatus = 'hide';
     let view = 
     `
     <div class="container">
