@@ -7,7 +7,7 @@ const logout = () => {
         document.cookie = "USER_EMAIL=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         router() ;
 
-    },3000);
+    },300000);
 };
 
 export default logout;
