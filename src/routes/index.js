@@ -1,9 +1,7 @@
 import Header from '../templates/Header';
 import Footer from '../templates/Footer';
 
-import Error404 from '../pages/Error404';
 import Home from '../pages/Home';
-import getHash from '../utils/getHash';
 import getUser from '../utils/getUser';
 import getCookie from '../utils/getCookie';
 import logout from '../utils/logout'
@@ -14,7 +12,6 @@ const routes = {
 
 
 const router  = async () => {
-
     const header = null || document.getElementById('header');
     const footer = null || document.getElementById('footer');
     const main = null || document.getElementById('main');
@@ -23,18 +20,12 @@ const router  = async () => {
 
     header.innerHTML = await Header(status, USER_NAME);
     footer.innerHTML = await Footer();
-
-    let hash = getHash();
-    let render = routes[hash] ? routes[hash] : Error404();
-    main.innerHTML = await render;
-    console.log(hash);
+    main.innerHTML = await Home();
 
     
     if (status){
-        console.log('setTimeout');
-        logout();
+        logout()
     } else{
-        main.innerHTML = await Home();
         getUser()
     }
      

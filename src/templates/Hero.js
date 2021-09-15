@@ -18,7 +18,7 @@ const Hero = (status,USER_NAME) => {
                 Harmon for Cartoon Network's nighttime programming
                 block, Adult Swim.
             </p>
-            <form action=""  id="subscribe-form" class="${formStatus}">
+            <form action="" id="subscribe-form" class="${formStatus}">
                 <label for="name">Subscribe to our Newsletter</label>
                 <input
                     id="name"

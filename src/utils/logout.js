@@ -10,4 +10,5 @@ const logout = () => {
     },300000);
 };
 
+
 export default logout;

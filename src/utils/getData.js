@@ -10,7 +10,6 @@ const getData = async (id) => {
         
     } catch (error){
         console.log('Fetch Error', error);
-        
     }
 }
 
