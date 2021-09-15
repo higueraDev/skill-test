@@ -1,7 +1,10 @@
 
 const setCookie = (name,value) => {
     
-    return document.cookie = name + "=" + value + ";" + ";path=/;";
+    const d = new Date();
+    d.setTime(d.getTime() + (5*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 
 };
 
